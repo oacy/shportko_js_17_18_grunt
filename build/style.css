@@ -1,0 +1,845 @@
+.checkbox2 input[type=checkbox] {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+}
+.checkbox2 label {
+    cursor: pointer;
+}
+.checkbox2 label:after {
+    content: " ";
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    background: url(../img/checkbox-sprite.png);
+    position: relative;
+    top: 3px;
+    margin-left: 15px;
+}
+.checkbox2 input[type=checkbox]:checked + label:after {
+    background-position: 0 -17px;
+}
+.checkbox2 label:hover:after {
+    background-position: 0 -34px;
+}
+.checkbox2 input[type=checkbox]:checked + label:hover:after {
+    background-position: 0 -51px;
+}
+
+
+.checkbox2 {
+    margin: 20px;
+}
+.niceCheck {
+    width: 17px;
+    height: 17px;
+    display: inline-block;
+    cursor: pointer;
+    background: url(../img/checkbox-sprite.png);
+}
+.niceCheck input {
+    display: none;
+}
+
+.checkbox1{
+    margin: 20px;
+}
+
+.jcarousel-wrapper {
+    margin: 20px auto;
+    position: relative;
+    border: 10px solid #fff;
+    width: 600px;
+    height: 450px;
+
+    -webkit-border-radius: 5px;
+       -moz-border-radius: 5px;
+            border-radius: 5px;
+    -webkit-box-shadow: 0 0 2px #999;
+       -moz-box-shadow: 0 0 2px #999;
+            box-shadow: 0 0 2px #999;
+}
+
+
+/** Carousel **/
+
+.jcarousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.jcarousel img{
+    width: 600px;
+    height: 450px;
+}
+
+.jcarousel ul {
+    width: 20000em;
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.jcarousel li {
+    float: left;
+}
+
+/** Carousel Controls **/
+
+.jcarousel-control-prev,
+.jcarousel-control-next {
+    position: absolute;
+    top: 200px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    background: #4E443C;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 0 0 1px #000;
+    font: 24px/27px Arial, sans-serif;
+    -webkit-border-radius: 30px;
+       -moz-border-radius: 30px;
+            border-radius: 30px;
+    -webkit-box-shadow: 0 0 2px #999;
+       -moz-box-shadow: 0 0 2px #999;
+            box-shadow: 0 0 2px #999;
+}
+
+.jcarousel-control-prev {
+    left: 30px;
+}
+
+.jcarousel-control-next {
+    right: 30px;
+}
+
+.jcarousel-control-prev:hover span,
+.jcarousel-control-next:hover span {
+    display: block;
+}
+
+.jcarousel-control-prev.inactive,
+.jcarousel-control-next.inactive {
+    opacity: .5;
+    cursor: default;
+}
+
+/** Carousel Pagination **/
+
+.jcarousel-pagination {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    /*left: 15px;*/
+}
+
+.jcarousel-pagination a {
+    text-decoration: none;
+    display: inline-block;
+    color: transparent;
+    background: #fff;
+    border-radius: 5px;
+    height: 8px;
+    margin: 3px;
+    opacity: .75;
+}
+
+.jcarousel-pagination a.active {
+    background: #4E443C;
+    opacity: 1;
+}
+
+.wrapper h1{
+    font-size: 35px;
+    font-weight: bold;
+    color: dodgerblue;
+    text-align: center;
+}
+
+
+/*====================
+	Color Scheme Begin
+=====================================================================
+====================================================================*/
+
+/* Menu bar background color */
+#navigation, 
+#nav li ul li, 
+#nav li ul li a{
+background: #000; 
+}
+
+/* Menu Item text color */
+#nav li a, 
+#nav li a:hover, 
+#nav li ul li,
+#nav li ul li a,
+#nav li ul li a:hover  {
+color: #fff; 
+}
+
+/* Menu Item background color on hover */
+#nav li a:hover, 
+#nav li ul li a:hover  {
+background: #5F9EA0; 
+}
+
+/* Text Shadow */
+#nav li a, 
+#nav li a:hover, 
+#nav li ul li a:hover  {
+text-shadow: 0 1px 1px #333; 
+}
+
+/* Search form colors */
+.searchform input, .searchform input:not(:focus){
+color:#B1B1B1; /*search form text color default*/
+background: #fff; /*search form background color default*/
+}
+.searchfield:focus{
+color: #6FA7A9; /* search form text color after click */
+}
+
+/*=====================================================================
+=======================================================================
+	Color Scheme End
+====================*/
+
+#menu_div{
+clear: both;
+position: relative;
+top: 0;
+left: 0;
+    z-index: 1000;
+} /* Free space to top specialy for menu */
+
+#navigation {
+position: fixed;
+}
+
+#navigation, #menu_div {
+width: 100%;
+margin: 0 !important;
+padding: 0 !important;
+}
+
+#menu_div, #navigation, #menu, #nav{
+height: 45px; /* menu height */
+}
+
+#menu_div:hover,
+#navigation:hover,
+#nav li a:hover, #nav li ul a 
+{
+opacity: 0.95;/* Menu transparency on mouse hover*/
+} 
+
+#menu_div,
+#navigation, 
+#nav li a, 
+#menu_div:not(:hover), 
+#navigation:not(:hover)
+{
+opacity: 0.8;/* Menu transparency on mouse out */
+}
+
+
+#menu {
+width: 960px;
+margin:0 auto; /*center the menu*/
+padding:0;
+position: relative;
+}
+
+#nav{
+width: 960px;
+margin:0;
+padding:0;
+position: relative;
+font-family: 'Arial', Helvetica, sans-serif;
+}
+
+#nav li a,#nav li {
+float:left;
+}
+
+#nav li {
+list-style:none;
+position:relative;
+}
+
+#nav li a {
+line-height: 45px;
+padding:0 15px;
+text-decoration:none;
+margin:0;
+font-size:12px;
+font-weight:700;
+text-transform:uppercase;
+}
+
+/*====================
+	Submenu 
+=====================*/
+#nav li ul {
+display:none;
+position:absolute;
+left:0;
+top:100%;
+padding:0;
+margin:0;
+} /* hide submenu */
+
+#nav li:hover > ul {
+display:block;
+} /* show submenu on hover */
+
+#nav li ul li,#nav li ul li a {
+float:none;
+height: 35px; /* submenu item height */
+min-width: 150px; /* submenu item minimal width */
+line-height: 35px;
+border-right: 0;
+text-shadow: none;
+display:block;
+font-size:13px;
+font-weight:400;
+text-transform:inherit;
+} /* Submenu item */
+
+#nav li ul li {
+_display:inline; /* for IE */
+}
+
+/* == 12. Sub-Sub Menu == */
+#nav li ul li ul {
+display:none;
+}
+
+#nav li ul li:hover ul {
+left:100%;
+top:0;
+}
+
+/*====================
+	Search form 
+====================*/
+
+.searchform {
+position: absolute;
+right: 15px;
+top: 6px;
+display: inline-block;
+zoom: 1;
+*display: inline;
+border: 0;
+padding: 0;
+}
+.searchform input {
+font: normal 12px/100% Arial, Helvetica, sans-serif;
+}
+.searchform .searchfield {
+height: 27px;
+line-height: 27px;
+padding-left: 10px;
+padding-right: 10px;
+width: 150px;
+border: 2px solid #333;
+outline: none;
+-webkit-border-radius: 2em;
+-moz-border-radius: 2em;
+border-radius: 2em;
+-moz-box-shadow: inset 1px 1px 2px #A1A1A1;
+-webkit-box-shadow: inset 1px 1px 2px #A1A1A1;
+box-shadow: inset 1px 1px 2px #A1A1A1;
+}
+
+.searchfield:focus{
+font-weight: 700;
+width: 220px;
+}
+
+.searchfield:not(:focus){
+width: 150px;
+}
+
+
+/*========================
+		Transitions
+========================*/
+
+#nav li a:hover,
+#nav li ul li a:hover  {
+-webkit-transition-property:color, background; 
+-webkit-transition-duration: 0.5s, 0.5s; 
+-webkit-transition-timing-function: linear, ease-out;
+}
+
+.searchfield:focus,
+.searchfield:not(:focus){
+-webkit-transition-property:width; 
+-webkit-transition-duration: 0.5s, 0.5s; 
+-webkit-transition-timing-function: linear, ease-out;
+}
+
+#menu_div:hover,
+#navigation:hover,
+#nav li ul a, 
+#menu_div,
+#navigation, 
+#nav li a, 
+#menu_div:not(:hover), 
+#navigation:not(:hover)
+{
+-webkit-transition-property:opacity; 
+-webkit-transition-duration: 0.5s, 0.5s; /* duration in seconds */
+-webkit-transition-timing-function: linear, ease-out;
+} /* Menu transparency animation */
+
+
+
+
+/* `XHTML, HTML4, HTML5 Reset
+----------------------------------------------------------------------------------------------------*/
+
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+dialog,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+font,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+hr,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+meter,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+progress,
+q,
+rp,
+rt,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video,
+xmp {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+/*
+  Override the default (display: inline) for
+  browsers that do not recognize HTML5 tags.
+
+  IE8 (and lower) requires a shiv:
+  http://ejohn.org/blog/html5-shiv
+*/
+  display: block;
+}
+
+b,
+strong {
+/*
+  Makes browsers agree.
+  IE + Opera = font-weight: bold.
+  Gecko + WebKit = font-weight: bolder.
+*/
+  font-weight: bold;
+}
+
+img {
+  color: transparent;
+  font-size: 0;
+  vertical-align: middle;
+/*
+  For IE.
+  http://css-tricks.com/ie-fix-bicubic-scaling-for-images
+*/
+  -ms-interpolation-mode: bicubic;
+}
+
+li {
+/*
+  For IE6 + IE7.
+*/
+  display: list-item;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th,
+td,
+caption {
+  font-weight: normal;
+  vertical-align: top;
+  text-align: left;
+}
+
+q {
+  quotes: none;
+}
+
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+sub,
+sup,
+small {
+  font-size: 75%;
+}
+
+sub,
+sup {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+svg {
+/*
+  For IE9.
+*/
+  overflow: hidden;
+}
+/*======================================
+  Selectric v1.11.0
+======================================*/
+
+.selectric-wrapper {
+  position: relative;
+  cursor: pointer;
+}
+
+.selectric-responsive {
+  width: 100%;
+}
+
+.selectric {
+  border: 1px solid #DDD;
+  background: #F8F8F8;
+  position: relative;
+}
+
+.selectric .label {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0 38px 0 10px;
+  font-size: 12px;
+  line-height: 38px;
+  color: #444;
+  height: 38px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.selectric .button {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 38px;
+  height: 38px;
+  color: #BBB;
+  text-align: center;
+  font: 0/0 a;
+  *font: 20px/38px Lucida Sans Unicode, Arial Unicode MS, Arial;
+}
+
+.selectric .button:after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 0;
+  height: 0;
+  border: 4px solid transparent;
+  border-top-color: #BBB;
+  border-bottom: none;
+}
+
+.selectric-focus .selectric {
+  border-color: #aaaaaa;
+}
+
+.selectric-hover .selectric {
+  border-color: #c4c4c4;
+}
+
+.selectric-hover .selectric .button {
+  color: #a2a2a2;
+}
+
+.selectric-hover .selectric .button:after {
+  border-top-color: #a2a2a2;
+}
+
+.selectric-open {
+  z-index: 9999;
+}
+
+.selectric-open .selectric {
+  border-color: #c4c4c4;
+}
+
+.selectric-open .selectric-items {
+  display: block;
+}
+
+.selectric-disabled {
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+  cursor: default;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.selectric-hide-select {
+  position: relative;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+}
+
+.selectric-hide-select select {
+  position: absolute;
+  left: -100%;
+}
+
+.selectric-hide-select.selectric-is-native {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+.selectric-hide-select.selectric-is-native select {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  border: none;
+  z-index: 1;
+  box-sizing: border-box;
+  opacity: 0;
+}
+
+.selectric-input {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 1px !important;
+  height: 1px !important;
+  outline: none !important;
+  border: none !important;
+  *font: 0/0 a !important;
+  background: none !important;
+}
+
+.selectric-temp-show {
+  position: absolute !important;
+  visibility: hidden !important;
+  display: block !important;
+}
+
+/* Items box */
+.selectric-items {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #F8F8F8;
+  border: 1px solid #c4c4c4;
+  z-index: -1;
+  box-shadow: 0 0 10px -6px;
+}
+
+.selectric-items .selectric-scroll {
+  height: 100%;
+  overflow: auto;
+}
+
+.selectric-above .selectric-items {
+  top: auto;
+  bottom: 100%;
+}
+
+.selectric-items ul, .selectric-items li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+  line-height: 20px;
+  min-height: 20px;
+}
+
+.selectric-items li {
+  display: block;
+  padding: 10px;
+  color: #666;
+  cursor: pointer;
+}
+
+.selectric-items li.selected {
+  background: #E0E0E0;
+  color: #444;
+}
+
+.selectric-items li.highlighted {
+  background: #D0D0D0;
+  color: #444;
+}
+
+.selectric-items li:hover {
+  background: #D5D5D5;
+  color: #444;
+}
+
+.selectric-items .disabled {
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+  cursor: default !important;
+  background: none !important;
+  color: #666 !important;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.selectric-items .selectric-group .selectric-group-label {
+  font-weight: bold;
+  padding-left: 10px;
+  cursor: default;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background: none;
+  color: #444;
+}
+
+.selectric-items .selectric-group.disabled li {
+  filter: alpha(opacity=100);
+  opacity: 1;
+}
+
+.selectric-items .selectric-group li {
+  padding-left: 25px;
+}
